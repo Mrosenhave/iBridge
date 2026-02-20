@@ -43,7 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     let imageCell = NSMenuItem()
 
-    let containerView = NSView(frame: NSRect(x: 0, y: 0, width: 150, height: 100))
+    let containerView = NSView(frame: NSRect(x: 0, y: 0, width: 180, height: 100))
 
     let imageView = NSImageView()
     imageView.image = NSImage(named: "AppIcon")
@@ -64,9 +64,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     titleCell.title = "iBridge"
     menu.addItem(titleCell)
     
-//    let linkCell = NSMenuItem(title: "GitHub", action: #selector(openGithubLink), keyEquivalent: "")
-//    linkCell.target = self // 'self' is the class with the openGithubLink function
-//    menu.addItem(linkCell)
+    let linkCell = NSMenuItem(title: "View on GitHub", action: #selector(openGithubLink), keyEquivalent: "")
+    linkCell.target = self // 'self' is the class with the openGithubLink function
+    menu.addItem(linkCell)
     
     menu.addItem(NSMenuItem.separator())
     
@@ -81,10 +81,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     statusItem.menu = menu
   }
   
-//  @objc func openGithubLink() {
-//      if let url = URL(string: "https://www.github.com") {
-//          NSWorkspace.shared.open(url)
-//      }
-//  }
+  @objc func openGithubLink() {
+      if let url = URL(string: "https://www.github.com/Mrosenhave/iBridge") {
+          NSWorkspace.shared.open(url)
+      }
+  }
   
 }
