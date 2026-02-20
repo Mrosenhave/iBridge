@@ -37,6 +37,11 @@ Other versions haven't been tested, but they might work.
 ## To-Do
 1. [x] Implement seeking
 
+## Known Issues
+* iBridge does not work correctly when the Apple Music app is also active. This is because Apple Music sends the same "com.apple.iTunes.playerInfo" notifications as iTunes that iBridge listens to.
+
+**Workaround:** Avoid using the Apple Music app while listening to iTunes.
+
 ## Compatability
  * macOS 11.5 Big Sur or newer
  * iTunes ver. 10.7 or 11.4 ([Install via Retroactive](https://github.com/cormiertyshawn895/Retroactive))
