@@ -46,4 +46,17 @@ func setupRemoteCommands(commandCenter: MPRemoteCommandCenter) {
     return .success
   }
   
+  commandCenter.changePlaybackPositionCommand.removeTarget(nil)
+  commandCenter.changePlaybackPositionCommand.isEnabled = true
+  commandCenter.changePlaybackPositionCommand.addTarget { event in
+      guard let positionEvent = event as? MPChangePlaybackPositionCommandEvent else {
+          return .commandFailed
+      }
+      let newTime = positionEvent.positionTime
+    
+      runAppleScript(code: "tell application \"iTunes\" to set player position to \(newTime)")
+      
+      return .success
+  }
+  
 }

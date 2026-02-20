@@ -35,7 +35,7 @@ Other versions haven't been tested, but they might work.
 2. Drag iBridge.app into the "Open at Login" list.
 
 ## To-Do
-1. [ ] Implement seeking
+1. [x] Implement seeking
 
 ## Compatability
  * macOS 11.5 Big Sur or newer
