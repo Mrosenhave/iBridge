@@ -11,6 +11,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		12A16E272F48A65F001F8926 /* Exceptions for "docs" folder in "iBridge" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Assets/Demo@2x.png",
+			);
+			target = 12C538DC2F4765A60067721E /* iBridge */;
+		};
 		12C538F12F476B970067721E /* Exceptions for "iBridge" folder in "iBridge" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -18,27 +25,15 @@
 			);
 			target = 12C538DC2F4765A60067721E /* iBridge */;
 		};
-		12F2E5BF2F48909300B28317 /* Exceptions for "Readme" folder in "iBridge" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Assets/AppIcon@2x.png",
-				Assets/ControlCenter.png,
-				"Assets/Demo@2x.png",
-				"Assets/MediaKeysDark@2x.png",
-				"Assets/MediaKeysLight@2x.png",
-				README.md,
-			);
-			target = 12C538DC2F4765A60067721E /* iBridge */;
-		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		123047782F48789B009A4151 /* Readme */ = {
+		123047782F48789B009A4151 /* docs */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				12F2E5BF2F48909300B28317 /* Exceptions for "Readme" folder in "iBridge" target */,
+				12A16E272F48A65F001F8926 /* Exceptions for "docs" folder in "iBridge" target */,
 			);
-			path = Readme;
+			path = docs;
 			sourceTree = "<group>";
 		};
 		12C538DF2F4765A60067721E /* iBridge */ = {
@@ -65,7 +60,7 @@
 		12C538D42F4765A60067721E = {
 			isa = PBXGroup;
 			children = (
-				123047782F48789B009A4151 /* Readme */,
+				123047782F48789B009A4151 /* docs */,
 				12C538DF2F4765A60067721E /* iBridge */,
 				12C538DE2F4765A60067721E /* Products */,
 			);
@@ -95,7 +90,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				123047782F48789B009A4151 /* Readme */,
+				123047782F48789B009A4151 /* docs */,
 				12C538DF2F4765A60067721E /* iBridge */,
 			);
 			name = iBridge;
