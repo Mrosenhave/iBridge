@@ -12,8 +12,8 @@ func setupRemoteCommands(commandCenter: MPRemoteCommandCenter) {
   commandCenter.togglePlayPauseCommand.removeTarget(nil)
   commandCenter.togglePlayPauseCommand.isEnabled = true
   commandCenter.togglePlayPauseCommand.addTarget { _ in
-    runAppleScript(code: "tell application \"iTunes\" to playpause")
-    return .success
+    let result = runAppleScript(code: "tell application \"iTunes\" to playpause")
+    return result == nil ? .commandFailed : .success
   }
   
   commandCenter.pauseCommand.removeTarget(nil)
@@ -41,7 +41,16 @@ func setupRemoteCommands(commandCenter: MPRemoteCommandCenter) {
   commandCenter.previousTrackCommand.removeTarget(nil)
   commandCenter.previousTrackCommand.isEnabled = true
   commandCenter.previousTrackCommand.addTarget { _ in
-    runAppleScript(code: "tell application \"iTunes\" to previous track")
+    let source = """
+      tell application "iTunes"
+          if (player position > 5) then
+              set player position to 0
+          else
+              previous track
+          end if
+      end tell
+      """
+    runAppleScript(code: source)
     MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPNowPlayingInfoPropertyElapsedPlaybackTime] = 0.0
     return .success
   }
