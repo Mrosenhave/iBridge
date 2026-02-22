@@ -45,3 +45,6 @@ Other versions haven't been tested, but they might work.
 ## Compatability
  * macOS 11.5 Big Sur or newer
  * iTunes ver. 10.7 or 11.4 ([Install via Retroactive](https://github.com/cormiertyshawn895/Retroactive))
+ 
+ ## Bonus
+[Fix square corners in iTunes](https://gist.github.com/Mrosenhave/59b224f4adac6959f788994c68b20ce6)
